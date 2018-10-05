@@ -1,22 +1,25 @@
-'use strict'
+'use strict';
 
 let money = prompt("Ваш бюджет на месяц?", ""),
     time = prompt("Введите дату в формате YYYY-MM-DD", ""),
     ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
-    ques2 = prompt("Во сколько обойдется", ""),
-    optionalExpenses;
+    answer = +prompt("Во сколько обойдется", ""),
+    ques2 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+    answer2 = +prompt("Во сколько обойдется", "");
+    
 
 let appData = {
     money,
     timeData: time,
     expenses: {
-        ques,
-        ques2
+        [ques]:answer,
+        [ques2]:answer2,
     },
-    optionalExpenses,
+    optionalExpenses: {},
     income: [],
     savings: false
 };
 
-console.log(appData);
 alert("Бюджет на 1 день: " + money/30);
+console.log(appData);
+console.log(appData.expenses);
