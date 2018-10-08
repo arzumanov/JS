@@ -28,6 +28,20 @@ let appData = {
 //     a++;
 // };
 
+// Цикл while
+
+// let a = 0;
+// while (a < 3){
+//     console.log(a);
+//     a++;
+// }
+
+// Цикл do while
+// let a = 0;
+// do {
+//   console.log(a);
+//   a++;
+// } while (a < 3);
 
 for (let i = 0; i < 2; i++) {
     let ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
