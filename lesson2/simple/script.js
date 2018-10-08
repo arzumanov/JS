@@ -13,6 +13,22 @@ let appData = {
     savings: false
 };
 
+// Цикл for первый способ:
+
+// let a = 1;
+// for (; a < 5; a++) {
+//     console.log(a);
+// };
+
+// Второй способ:
+
+// let a = 1;
+// for (; a < 5;) {
+//     console.log(a);
+//     a++;
+// };
+
+
 for (let i = 0; i < 2; i++) {
     let ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
         answer = prompt("Во сколько обойдется", "");
@@ -22,7 +38,7 @@ for (let i = 0; i < 2; i++) {
         console.log("Done");
         appData.expenses[ques] = answer;
     } else {
-
+        i--;
     }
 };
 
