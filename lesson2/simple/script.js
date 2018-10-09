@@ -13,35 +13,6 @@ let appData = {
     savings: false
 };
 
-// Цикл for первый способ:
-
-// let a = 1;
-// for (; a < 5; a++) {
-//     console.log(a);
-// };
-
-// Второй способ:
-
-// let a = 1;
-// for (; a < 5;) {
-//     console.log(a);
-//     a++;
-// };
-
-// Цикл while
-
-// let a = 0;
-// while (a < 3){
-//     console.log(a);
-//     a++;
-// }
-
-// Цикл do while
-// let a = 0;
-// do {
-//   console.log(a);
-//   a++;
-// } while (a < 3);
 
 for (let i = 0; i < 2; i++) {
     let ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
@@ -55,6 +26,38 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 };
+
+// let i = 0;
+// do {
+//     let ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
+//         answer = prompt("Во сколько обойдется", "");
+
+//     if ((typeof(ques)) === 'string' && (typeof(ques)) != null && (typeof(answer)) 
+//     != null && ques != '' && answer != '' && ques.length < 50) {
+//         console.log("Done");
+//         appData.expenses[ques] = answer;
+//     } else {
+//         i--;
+//     }
+//     i++;
+// }
+// while (i < 2);
+
+
+// let i = 0;
+// while ( i < 2) {
+//     let ques = prompt("Введите обязательную статью расходов в этом месяце", ""),
+//         answer = prompt("Во сколько обойдется", "");
+
+//     if ((typeof(ques)) === 'string' && (typeof(ques)) != null && (typeof(answer)) 
+//     != null && ques != '' && answer != '' && ques.length < 50) {
+//         console.log("Done");
+//         appData.expenses[ques] = answer;
+//     } else {
+//         i--;
+//     }
+//     i++;
+// };
 
 console.log(appData.budget);
 appData.moneyPerDay = appData.budget / 30;
