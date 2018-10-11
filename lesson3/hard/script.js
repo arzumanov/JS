@@ -11,10 +11,12 @@ document.write(word);
 
 
 let arr = [20, 33, 1, "Человек", 2, 3];
-delete arr[3];
-
+arr.splice(3,1);
+let b = 0;
+let a = 0;
 for (var i = 0; i < arr.length; i++) {
-    console.log(Math.pow(arr[i],3));
+    a = Math.sqrt(b += Math.pow(arr[i],3));
 }
+console.log(a);
 
 
