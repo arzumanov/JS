@@ -25,9 +25,6 @@ column[1].removeChild(adv);
 // Вставляем ответ пользователя
 answer.textContent = ques;
 
-
-
-
 // console.log(menu);
 // console.log(menuItem);
 // console.log(li);
