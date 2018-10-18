@@ -12,8 +12,7 @@ function timer(){
         if( minute > 0 ) 
         minute--;
         else{
-            second = 59;
-             
+            second = 59;             
             if( hour > 0 ) 
             hour--;
             else 
@@ -24,7 +23,16 @@ function timer(){
     if(end){
         clearInterval(intervalID);
         alert("Time is out");
-    }else{
+    }if (hour < 10){
+        document.getElementById('hour').innerHTML = ("0" + hour).slice(-2);
+    }
+    if (minute < 10) {
+        document.getElementById('minute').innerHTML = ("0" + minute).slice(-2);
+    }
+    if (second < 10) {
+        document.getElementById('second').innerHTML = ("0" + second).slice(-2);
+    }
+    else{
         document.getElementById('hour').innerHTML = hour;
         document.getElementById('minute').innerHTML = minute;
         document.getElementById('second').innerHTML = second;
