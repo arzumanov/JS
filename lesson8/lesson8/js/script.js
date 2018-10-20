@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     });
     // Timer
-    let deadline = '2018-10-21';
+    let deadline = '2018-10-25';
 
     function getTimeRemaining(endtime){
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -71,6 +71,9 @@ window.addEventListener('DOMContentLoaded', function(){
             // days.textContent = t.days;
 
             if(t.total <= 0) {
+                hours.textContent = '00';
+                minutes.textContent = '00';
+                seconds.textContent = '00';
                 clearInterval(timeInterval);
             }
         }
