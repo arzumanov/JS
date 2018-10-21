@@ -98,10 +98,10 @@ window.addEventListener('DOMContentLoaded', function(){
         document.body.style.overflow = '';
     });
 
-    let     info = document.querySelector('.info');
+    let info = document.querySelector('.info');
 
-    info.addEventListener('click', function () {
-        let target = event.target;
+    info.addEventListener('click', function (e) {
+        let target = e.target;
         if( target.className === 'description-btn' ){
             overlay.style.display = 'block';
             document.body.style.overflow = 'hidden';
