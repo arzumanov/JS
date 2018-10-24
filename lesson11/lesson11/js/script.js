@@ -195,18 +195,27 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // Проверка телефона
     
-    input.addEventListener('click', function() {
-        if(!/^\+\d*$/.test(input.value)) {
-            input.value = '+';
+    input[0].addEventListener('focus', function() {
+        if(!/^\+\d*$/.test(input[0].value)) {
+            input[0].value = '+';
         }
-    });
-    
+    });    
 
-    input.addEventListener('keypress', function(event) {
+    input[0].addEventListener('keypress', function(event) {
         if(!/\d/.test(event.key)){
             event.preventDefault();
         } 
     });
 
+    contactsInput[1].addEventListener('focus', function() {
+        if(!/^\+\d*$/.test(contactsInput[1].value)) {
+            contactsInput[1].value = '+';
+        }
+    });
 
+    contactsInput[1].addEventListener('keypress', function(event) {
+        if(!/\d/.test(event.key)){
+            event.preventDefault();
+        } 
+    });
 });
