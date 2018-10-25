@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function(){
         }
     });
     // Timer
-    let deadline = '2018-10-25';
+    let deadline = '2018-10-28';
 
     function getTimeRemaining(endtime){
         let t = Date.parse(endtime) - Date.parse(new Date()),
@@ -100,15 +100,14 @@ window.addEventListener('DOMContentLoaded', function(){
 
     let info = document.querySelector('.info');
 
-    info.addEventListener('click', function (e) {
-        let target = e.target;
+    info.addEventListener('click', function (event) {
+        let target = event.target;
         if( target.className === 'description-btn' ){
             overlay.style.display = 'block';
             document.body.style.overflow = 'hidden';
         }
     });
     // Form
-
     let message = {
         loading: 'Загрузка...',
         success: 'Спасибо! Скоро мы с вами свяжемся',
@@ -166,7 +165,6 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
 	sendForm(form);
-	sendForm(formbottom);
 
     // form.addEventListener('submit', function(event) {
     //     event.preventDefault();
