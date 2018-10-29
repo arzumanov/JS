@@ -274,7 +274,8 @@ window.addEventListener('DOMContentLoaded', function(){
             }else if (restDays.keyCode == 43 && restDays.keyCode == 107) {
                 event.preventDefault();
             }else {
-                totalValue.innerHTML = total;
+                let a = total;
+                totalValue.innerHTML = a * place.options[place.selectedIndex].value;
             }            
             
         });
@@ -292,7 +293,8 @@ window.addEventListener('DOMContentLoaded', function(){
             if (persons.value == '') {
                 totalValue.innerHTML = 0;
             }else {
-                totalValue.innerHTML = total;
+                let a = total;
+                totalValue.innerHTML = a * place.options[place.selectedIndex].value;
             }
         });
 
@@ -312,7 +314,7 @@ window.addEventListener('DOMContentLoaded', function(){
         });
 
         document.body.addEventListener('click', function(){
-            if (restDays.value == '' || persons.value == '') {
+            if (restDays.value == '' || persons.value == '' || restDays.value == 0 || persons.value == 0) {
                 totalValue.innerHTML = 0;
             }
         });
