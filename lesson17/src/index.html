@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="tabs">
+
+		<ul class="tabs__caption">
+			<li class="active">Вкусная еда</li>
+			<li>Калькулятор</li>
+			<li>Развлечение</li>
+		</ul>
+
+	<div class="tabs__content  active">
+		<div class="owl-carousel owl-theme">
+		  <img class="owl-height" src="img/4.png" alt="">
+		  <img class="owl-height" src="img/5.png" alt="">
+		  <img class="owl-height" src="img/6.png" alt="">
+		</div>
+		
+	</div>
+
+	<div class="tabs__content">
+		<div class="container">  
+            <div class="view">0</div>
+        </div>
+	</div>
+
+	<div class="tabs__content">
+		  <div class="card">
+		  <p>Нажми на кнопку</p>
+		  
+		  <button class="open">Кнопка</button>
+		</div>
+
+		<div class="modals">
+		  <div class="modal-content">
+		    <div class="modal-wrap">
+		      <p>Заходи на мою страницу еще...</p>
+		      <button class="close">Вернуться</button>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+</div>
+<!-- .tabs -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/calc.js"></script>
+	<script src="js/modal.js"></script>
+	<script>
+		(function($) {
+		$(function() {
+
+			$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			});
+
+		});
+		})(jQuery);
+	</script>
+	<script>
+		$(document).ready(function(){
+		  $(".owl-carousel").owlCarousel({
+		  	loop: true,
+		  	items: 1,
+		  	nav: true,
+		  	dots: true,
+		  	autoHeight:true,
+		  	animateOut: 'fadeOut',
+	  	    animateIn: 'flip'
+		  });
+		});
+	</script>
+	
+</body>
+</html>
